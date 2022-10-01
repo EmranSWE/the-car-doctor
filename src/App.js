@@ -11,6 +11,8 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import CheckOut from './Pages/CheckOut/CheckOut/CheckOut';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import AddService from './Pages/AddService/AddService';
+import ManageServices from './Pages/ManageServices/ManageServices';
 
 function App() {
   return (
@@ -22,9 +24,20 @@ function App() {
         <Route path='/service/:serviceId' element={<ServiceDetail></ServiceDetail>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/checkout' element={
-        <RequireAuth>
-          <CheckOut></CheckOut>
-        </RequireAuth>
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/addservice' element={
+          <RequireAuth>
+            <AddService></AddService>
+          </RequireAuth>
+        }></Route>
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageServices></ManageServices>
+          </RequireAuth>
         }></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

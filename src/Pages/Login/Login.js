@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import SocialLogin from './SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import DynamicTitle from '../Shared/dynamicTitle/DynamicTitle';
 
 const Login = () => {
   const emailChange = useRef('');
@@ -51,6 +52,7 @@ const Login = () => {
 
   return (
     <div className='container w-50 mx-auto'>
+      <DynamicTitle title='Login'></DynamicTitle>
       <h2 className='text-primary' >Please Login</h2>
       <Form onSubmit={handleLogin}>
         

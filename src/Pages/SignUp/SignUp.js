@@ -14,6 +14,7 @@ const SignUp = () => {
         createUserWithEmailAndPassword,user, error,
         loading
       ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+      
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate=useNavigate();
     const handleNavigate=()=>{
