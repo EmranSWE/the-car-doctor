@@ -7,6 +7,7 @@ import SocialLogin from './SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import DynamicTitle from '../Shared/dynamicTitle/DynamicTitle';
+import axios from 'axios';
 
 const Login = () => {
   const emailChange = useRef('');
@@ -28,17 +29,18 @@ const Login = () => {
    
     }
 
-  if(user){
-    navigate(from, { replace: true });
-  }
-  const handleLogin = (event) => {
+  
+  const handleLogin = async (event) => {
     event.preventDefault();
     const email = emailChange.current.value;
     const password = passwordChange.current.value;
-    signInWithEmailAndPassword(email, password)
+    await signInWithEmailAndPassword(email, password);
+    const {data} = await axios.post('http://localhost:5000/login',{email});
+    localStorage.setItem('accessToken',data.accessToken);
+    navigate(from, {replace: "true"})
   }
 
-  const resetPassword=async()=>{
+  const resetPassword= async()=>{
     const email=emailChange.current.value;
     if(email){
       await sendPasswordResetEmail(email);

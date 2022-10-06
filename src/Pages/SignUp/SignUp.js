@@ -43,9 +43,7 @@ const SignUp = () => {
           createUserWithEmailAndPassword(email, password);
           await updateProfile({ displayName:name });
           alert('Updated profile');
-          navigate('/home');
-        
-       
+          navigate('/home');  
     }
 
    
