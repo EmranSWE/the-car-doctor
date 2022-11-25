@@ -64,8 +64,7 @@ What User can Do:
 ![App Screenshot](https://i.ibb.co/5MRj6bb/screencapture-genius-car-services-84f83-web-app-addservice-2022-11-25-23-41-27.png)
 
 ### Mobile device
-
-- Add New Service
+- home
 ![App Screenshot](https://i.ibb.co/7GqRkYh/screencapture-genius-car-services-84f83-web-app-2022-11-25-23-43-14.png)
 ## Installation
 - First, Download Or Clone the repository
@@ -124,6 +123,7 @@ I would like to express my special thanks of gratitude to different technology r
 ## License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) This project is licensed under the MIT License - see the `LICENSE.md `file for details
+
 
 
 
